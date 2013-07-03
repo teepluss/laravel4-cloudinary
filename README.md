@@ -61,6 +61,12 @@ Cloudy::upload($_FILES['tmp_name'], 'custom_public_name', $tags);
 //Cloudy::upload('http://domain.com/remote.jpg', 'custom_public_name', $tags);
 ~~~
 
+Display an image.
+~~~php
+Cloudy::show('custom_public_name', array('width' => 150, 'height' => 150, 'crop' => 'fit', 'radius' => 20));
+~~~
+> More document from [cloudinary.com](http://cloudinary.com/documentation/image_transformations)
+
 Rename file, Delete file.
 
 ~~~php
