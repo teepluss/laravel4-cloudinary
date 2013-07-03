@@ -12,12 +12,12 @@ return array(
     |
     */
 
-    'cloudName'  => 'jquerytips',
-    'baseUrl'    => 'http://res.cloudinary.com/jquerytips',
-    'secureUrl'  => 'https://cloudinary-a.akamaihd.net/jquerytips',
-    'apiBaseUrl' => 'http://api.cloudinary.com/v1_1/jquerytips',
-    'apiKey'     => '599564323378641',
-    'apiSecret'  => 'lq4EVzvmROZM8baAx6j2nggyZjY',
+    'cloudName'  => '',
+    'baseUrl'    => '',
+    'secureUrl'  => '',
+    'apiBaseUrl' => '',
+    'apiKey'     => '',
+    'apiSecret'  => '',
 
     /*
     |--------------------------------------------------------------------------
