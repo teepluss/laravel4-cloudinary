@@ -70,6 +70,7 @@ $cloudinary = Cloudy::getCloudinary();
 // Get cloudinary uploader
 $uploader = Cloudy::getUploader();
 ~~~
+> To see more detail visit @ https://github.com/cloudinary/cloudinary_php
 
 ## Support or Contact
 
