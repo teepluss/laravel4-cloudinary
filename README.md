@@ -61,6 +61,24 @@ Cloudy::upload($_FILES['tmp_name'], 'custom_public_name', $tags);
 //Cloudy::upload('http://domain.com/remote.jpg', 'custom_public_name', $tags);
 ~~~
 
+Rename file, Delete file.
+
+~~~php
+Cloudy::rename('from_public_id', 'to_public_id');
+
+Cloudy::destroy('public_id');
+~~~
+
+Manage with tag.
+
+~~~php
+Cloudy::addTag('tag_d', array('public_id_1', 'public_id_2'));
+
+Cloudy::removeTag('tag_d', array('public_id_1', 'public_id_2'));
+
+Cloudy::replaceTag('tag_e', array('public_id_1', 'public_id_2'));
+~~~
+
 You can use original library from cloudinary also.
 
 ~~~php
