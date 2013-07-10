@@ -75,7 +75,7 @@ class CloudinaryWrapper {
     }
 
     /**
-     * Uplaod image to cloud.
+     * Upload image to cloud.
      *
      * @param  mixed $source
      * @param  string $publicId
