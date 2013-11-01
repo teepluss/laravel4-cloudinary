@@ -16,7 +16,7 @@
         "cloudinary/cloudinary_php": "dev-master"
     },
     "require-dev": {
-        "illuminate/support": "4.1.x",
+        "illuminate/support": "4.1.x"
     },
     "autoload": {
         "psr-0": {
