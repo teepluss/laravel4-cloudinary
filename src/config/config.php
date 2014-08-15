@@ -31,7 +31,7 @@ return array(
 
     'scaling'    => array(
         'format' => 'png',
-        'with'   => 150,
+        'width'   => 150,
         'height' => 150,
         'crop'   => 'fit',
         'effect' => null
