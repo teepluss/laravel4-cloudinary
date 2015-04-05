@@ -1,5 +1,5 @@
 {
-    "name": "jd/cloudinary",
+    "name": "teepluss/cloudinary",
     "description": "Cloudinary API wrapper for Laravel 4",
     "keywords": ["laravel", "laravel4", "cloudinary", "api", "image", "upload"],
     "homepage": "https://github.com/teepluss/laravel4-cloudinary",
