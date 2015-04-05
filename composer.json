@@ -1,5 +1,5 @@
 {
-    "name": "teepluss/cloudinary",
+    "name": "jd/cloudinary",
     "description": "Cloudinary API wrapper for Laravel 4",
     "keywords": ["laravel", "laravel4", "cloudinary", "api", "image", "upload"],
     "homepage": "https://github.com/teepluss/laravel4-cloudinary",
@@ -13,10 +13,10 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "cloudinary/cloudinary_php": "1.0.11"
+        "cloudinary/cloudinary_php": "dev-master"
     },
     "require-dev": {
-        "illuminate/support": "4.1.x"
+        "illuminate/support": ">=4.1.0"
     },
     "autoload": {
         "psr-0": {
