@@ -15,7 +15,7 @@ class CloudinaryWrapper {
     /**
      * Cloudinary uploader.
      *
-     * @var \Cloudinary\Uplaoder
+     * @var \Cloudinary\Uploader
      */
     protected $uploader;
 
@@ -39,11 +39,11 @@ class CloudinaryWrapper {
      * @param  \Illuminate\Config\Repository $config
      * @return void
      */
-    public function __construct(Repository $config)
+    public function __construct(Repository $config, Cloudinary $cloudinary, Cloudinary\Uploader $uploader)
     {
-        $this->cloudinary = new Cloudinary;
+        $this->cloudinary = $cloudinary;
 
-        $this->uploader = new Cloudinary\Uploader;
+        $this->uploader = $uploader;
 
         $this->config = $config;
 
@@ -82,7 +82,7 @@ class CloudinaryWrapper {
      * @param  array  $tags
      * @return CloudinaryWrapper
      */
-    public function upload($source, $publicId, $tags = array())
+    public function upload($source, $publicId = null, $tags = array())
     {
         $defaults = array(
             'public_id' => null,
@@ -164,6 +164,17 @@ class CloudinaryWrapper {
     public function destroy($publicId, $options = array())
     {
         return $this->getUploader()->destroy($publicId, $options);
+    }
+
+    /**
+     * Destroy images
+     * @param  array $publicIds
+     * @param  array $options
+     * @return array
+     */
+    public function destroyImages($publicIds, $options = array())
+    {
+        return $this->getUploader()->destroy($publicIds, $options);
     }
 
     /**
