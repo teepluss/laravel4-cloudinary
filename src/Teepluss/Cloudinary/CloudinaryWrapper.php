@@ -39,11 +39,11 @@ class CloudinaryWrapper {
      * @param  \Illuminate\Config\Repository $config
      * @return void
      */
-    public function __construct(Repository $config)
+    public function __construct(Repository $config, Cloudinary $cloudinary, Cloudinary\Uploader $uploader)
     {
-        $this->cloudinary = new Cloudinary;
+        $this->cloudinary = $cloudinary;
 
-        $this->uploader = new Cloudinary\Uploader;
+        $this->uploader = $uploader;
 
         $this->config = $config;
 

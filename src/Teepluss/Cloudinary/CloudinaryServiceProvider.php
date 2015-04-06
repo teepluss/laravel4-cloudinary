@@ -1,6 +1,7 @@
 <?php namespace Teepluss\Cloudinary;
 
 use Illuminate\Support\ServiceProvider;
+use Cloudinary;
 
 class CloudinaryServiceProvider extends ServiceProvider {
 
@@ -30,7 +31,7 @@ class CloudinaryServiceProvider extends ServiceProvider {
 	{
 		$this->app['cloudinary'] = $this->app->share(function($app)
 		{
-			return new CloudinaryWrapper($app['config']);
+			return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader);
 		});
 	}
 
