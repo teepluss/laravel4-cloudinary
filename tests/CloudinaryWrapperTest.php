@@ -80,7 +80,7 @@ class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase
         $this->uploader->shouldReceive('destroy')->with($pid, array())->once();
 
         // when
-        $this->cloudinary_wrapper->destroyImage($pid);
+        $this->cloudinary_wrapper->destroy($pid);
     }
 
     /** @test */

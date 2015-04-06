@@ -161,7 +161,7 @@ class CloudinaryWrapper {
      * @param  array  $options
      * @return array
      */
-    public function destroyImage($publicId, $options = array())
+    public function destroy($publicId, $options = array())
     {
         return $this->getUploader()->destroy($publicId, $options);
     }
@@ -184,7 +184,7 @@ class CloudinaryWrapper {
      */
     public function delete($publicId, $options = array())
     {
-        $response = $this->destroyImage($publicId, $options);
+        $response = $this->destroy($publicId, $options);
 
         return (boolean) ($response['result'] == 'ok');
     }
