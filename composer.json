@@ -16,7 +16,9 @@
         "cloudinary/cloudinary_php": "dev-master"
     },
     "require-dev": {
-        "illuminate/support": ">=4.1.0"
+        "illuminate/support": ">=4.1.0",
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": "0.9.*"
     },
     "autoload": {
         "psr-0": {
