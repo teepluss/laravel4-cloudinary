@@ -15,7 +15,7 @@ class CloudinaryWrapper {
     /**
      * Cloudinary uploader.
      *
-     * @var \Cloudinary\Uplaoder
+     * @var \Cloudinary\Uploader
      */
     protected $uploader;
 
