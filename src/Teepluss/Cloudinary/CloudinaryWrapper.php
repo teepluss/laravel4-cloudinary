@@ -2,6 +2,7 @@
 
 use Cloudinary;
 use Illuminate\Config\Repository;
+use Illuminate\Support\Facades\Log;
 
 class CloudinaryWrapper {
 
@@ -117,6 +118,29 @@ class CloudinaryWrapper {
     public function getPublicId()
     {
         return $this->uploadedResult['public_id'];
+    }
+
+    /**
+     * Check if the image is available with requested parameters.
+     *
+     * @param  string $publicId
+     * @param  array  $options
+     * @return boolean
+     */
+    public function check($publicId, $options = array())
+    {
+        $url     = $this->show($publicId, $options);
+        $headers = get_headers($url, true);
+
+        if (str_contains($headers[0], '200')) {
+            return true;
+        }
+        else {
+            if (isset($headers['X-Cld-Error'])) {
+                Log::warning('Cloudinary API: ' . $headers['X-Cld-Error']);
+            }
+            return false;
+        }
     }
 
     /**
