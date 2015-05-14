@@ -61,6 +61,14 @@ Cloudy::upload($_FILES['tmp_name'], 'custom_public_name', $tags);
 //Cloudy::upload('http://domain.com/remote.jpg', 'custom_public_name', $tags);
 ~~~
 
+Verify an image is available.
+~~~php
+// Simply if the image is on the service
+Cloudy::check('custom_public_name');
+// Or even with your custom parameters (this could be used to validate them, if there is a problem with your parameters, we log it using Laravel Log Facade.)
+Cloudy::check('custom_public_name', array('width' => 150, 'height' => 150, 'crop' => 'fit', 'radius' => 20));
+~~~
+
 Display an image.
 ~~~php
 Cloudy::show('custom_public_name', array('width' => 150, 'height' => 150, 'crop' => 'fit', 'radius' => 20));
