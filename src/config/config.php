@@ -15,6 +15,7 @@ return array(
     'cloudName'  => '',
     'baseUrl'    => '',
     'secureUrl'  => '',
+    'secure'     => false,
     'apiBaseUrl' => '',
     'apiKey'     => '',
     'apiSecret'  => '',
