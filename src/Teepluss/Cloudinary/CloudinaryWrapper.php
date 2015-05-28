@@ -130,6 +130,10 @@ class CloudinaryWrapper {
      */
     public function check($publicId, $options = array())
     {
+        if (!$publicId) {
+            return false;
+        }
+        
         $url     = $this->show($publicId, $options);
         $headers = get_headers($url, true);
 

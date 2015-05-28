@@ -12,6 +12,8 @@ return array(
     |
     */
 
+    'enabled'    => false,
+
     'cloudName'  => '',
     'baseUrl'    => '',
     'secureUrl'  => '',
