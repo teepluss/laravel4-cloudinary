@@ -130,19 +130,25 @@ class CloudinaryWrapper {
      */
     public function check($publicId, $options = array())
     {
-        if (!$publicId) {
+        if ( ! $publicId) {
             return false;
         }
-        
-        $url     = $this->show($publicId, $options);
-        $headers = get_headers($url, true);
 
-        if (str_contains($headers[0], '200')) {
+        $headers = false;
+        $url     = $this->show($publicId, $options);
+
+        try {
+            $headers = get_headers($url, true);
+        } catch (\Exception $e) {
+            Log::warning('Cloudinary API Error: ' . $e->getMessage());
+        }
+
+        if ($headers && str_contains($headers[0], '200')) {
             return true;
         }
         else {
             if (isset($headers['X-Cld-Error'])) {
-                Log::warning('Cloudinary API: ' . $headers['X-Cld-Error']);
+                Log::warning('Cloudinary API Error: ' . $headers['X-Cld-Error']);
             }
             return false;
         }
